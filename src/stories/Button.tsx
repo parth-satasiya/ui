@@ -34,14 +34,9 @@ export const Button = ({
   label,
   ...props
 }: ButtonProps) => {
-  const mode = React.useMemo(
-    () =>
-      primary ? "storybook-button--primary" : "storybook-button--secondary",
-    [primary]
-  );
-  // const mode = primary
-  //   ? "storybook-button--primary"
-  //   : "storybook-button--secondary";
+  const mode = primary
+    ? "storybook-button--primary"
+    : "storybook-button--secondary";
 
   return (
     <button
